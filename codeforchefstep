@@ -1,0 +1,34 @@
+#include<stdio.h>
+int main()
+{
+    int t_c;
+    scanf("%d",&t_c);
+    for(int x=0;x<t_c;x++)
+    {
+        int n,k;
+        scanf("%d%d",&n,&k);
+        int a[n],b[n];
+        for(int i=0;i<n;i++)
+        {
+            scanf("%d",&a[i]);
+        }
+        for(int i=0;i<n;i++)
+        {
+            if(a[i]>=k)
+            {
+             if(a[i]%k==0)
+                b[i]=1;
+             else
+                b[i]=0;
+            }
+            else
+               b[i]=0;
+        }
+        for(int i=0;i<n;i++)
+        {
+            printf("%d",b[i]);
+        }
+        printf("\n");
+    }
+}
+
